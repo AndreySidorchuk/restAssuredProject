@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+
+
+    // Use JUnit test framework
+    testImplementation 'junit:junit:4.12'
+
+    // https://bintray.com/bintray/jcenter/io.rest-assured%3Arest-assured
+    implementation 'io.rest-assured:rest-assured:4.3.2'
+
+    // https://bintray.com/bintray/jcenter/org.testng:testng
+    implementation 'org.testng:testng:6.9.6'
+
+    // https://bintray.com/bintray/jcenter/io.rest-assured%3Ajson-path
+    implementation 'io.rest-assured:json-path:4.3.2'
+
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.5'
+}
+
+test {
+    useJUnitPlatform()
+}
